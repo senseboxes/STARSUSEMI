@@ -14,3 +14,23 @@
  *= require_self
  */
 @import "bootstrap";
+
+/* Remove the navbar's default rounded borders and increase the bottom margin */
+.navbar {
+  margin-bottom: 50px;
+  border-radius: 0;
+  background-color: silver;
+}
+
+/* Remove the jumbotron's default bottom margin */
+ .jumbotron {
+  margin-bottom: 0;
+}
+
+.nav-link {
+  color: black;
+}
+
+.page-footer {
+  background-color: silver;
+}
