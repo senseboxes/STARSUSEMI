@@ -1,0 +1,29 @@
+<h1>Cscenters</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Created by</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cscenters.each do |cscenter| %>
+      <tr>
+        <td class="col-md-6 col-xs-6"><%= cscenter.title %></td>
+        <td><%= cscenter.user.present? ? cscenter.user.email : "n/a" %>, <%= time_ago_in_words(cscenter.created_at) %> ago</td>
+        <td>
+          <%= link_to "<span class='glyphicon glyphicon-eye-open'></span>".html_safe, cscenter %>&nbsp;
+          <%= link_to "<span class='glyphicon glyphicon-edit'></span>".html_safe, edit_cscenter_path(cscenter) %>&nbsp;
+          <%= link_to "<span class='glyphicon glyphicon-trash'></span>".html_safe, cscenter, method: :delete, data: { confirm: '정말로 삭제하시겠습니까?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cscenter', new_cscenter_path, class: "btn btn-default" %>

@@ -12,12 +12,17 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
+    <header>
+      <%= render 'layouts/header' %>
+    </header>
 
-    <div class="container">
+    <section>
+      <%= render partial: "shared/flash_messages", flash: flash %>
       <%= yield %>
-    </div>
+    </section>
 
-    <%= render 'layouts/footer' %>
+    <footer>
+      <%= render 'layouts/footer' %>
+    </footer>
   </body>
 </html>

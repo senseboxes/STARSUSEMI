@@ -5,6 +5,12 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# 회원인증 및 권한설정을 위한 젬
+gem 'devise'    # 회원가입 및 이메일 인증
+gem 'rolify'    # 역할 관리
+gem 'authority' # 권한 설정
+# 개발모드에서 이메일을 보내지않고 브라우저에서 바로 미리보기하는 젬
+gem 'letter_opener', group: :development  # 개발자모드에서만 적용
 # 깔끔한 뷰페이지를 위한 부트스트랩4
 gem 'bootstrap', '~> 4.1.0'
 gem 'jquery-rails'

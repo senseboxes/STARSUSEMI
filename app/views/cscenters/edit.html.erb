@@ -1,0 +1,13 @@
+<h1>Editing Cscenter</h1>
+  <div class="row">
+    <div class='col-md-12'>
+      <p style='text-align:right;'>
+        created by <%= current_user.email %>, <%= time_ago_in_words(@cscenter.created_at) %> ago
+      </p>
+    </div>
+  </div>
+  <%= render 'form', cscenter: @cscenter %>
+
+  <hr>
+  <%= link_to 'Show', @cscenter, class: 'btn btn-default' %>
+  <%= link_to 'Back', cscenters_path, class: 'btn btn-default' %>

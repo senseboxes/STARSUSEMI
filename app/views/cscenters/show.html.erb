@@ -1,0 +1,20 @@
+<div class='cscenter'>
+  <div class="title">
+    <h3>Title:
+    <%= @cscenter.title %></h3>
+  </div>
+
+  <div class="content">
+    <%= simple_format @cscenter.content %>
+  </div>
+
+  <div class="user">
+    <strong>Created by </strong>
+    <%= @cscenter.user.present? ? @cscenter.user.email : "an anonymous user" %>,
+    <%= time_ago_in_words(@cscenter.created_at) %> ago
+  </div>
+</div>
+
+<hr>
+<%= link_to 'Edit', edit_cscenter_path(@cscenter), class: 'btn btn-default' %>
+<%= link_to 'Back', cscenters_path, class: 'btn btn-default' %>

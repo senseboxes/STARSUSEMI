@@ -14,12 +14,13 @@
  *= require_self
  */
 @import "bootstrap";
+@import "cscenters";
 
 /* Remove the navbar's default rounded borders and increase the bottom margin */
 .navbar {
   margin-bottom: 50px;
   border-radius: 0;
-  background-color: silver;
+  background-color: rgba(76, 175, 80, 0.7);
 }
 
 /* Remove the jumbotron's default bottom margin */
@@ -28,9 +29,14 @@
 }
 
 .nav-link {
-  color: black;
+  background-color: rgba(76, 175, 80, 0.7);
+  color: white;
 }
 
 .page-footer {
-  background-color: silver;
+  background-color: rgba(76, 175, 80, 0.7);
+}
+
+.profile {
+
 }

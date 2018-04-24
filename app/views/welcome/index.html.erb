@@ -1,1 +1,13 @@
-<h1> index page </h1>
+<center>
+<h1>Welcome to</h1>
+
+<div style="margin-bottom:2em;">
+
+</div>
+
+<% if user_signed_in? %>
+  <p><%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: {confirm: "정말 로그아웃하시겠습니까?" }, class: 'btn btn-default'%></p>
+<% else %>
+  <p><%= link_to "로그인", new_user_session_path, class: 'btn btn-default' %></p>
+<% end %>
+</center>
